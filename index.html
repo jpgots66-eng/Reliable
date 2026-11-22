@@ -432,7 +432,7 @@ function fld(lbl,k,v,extra){return '<div class="field" style="margin-bottom:8px"
 function chk(lbl,k,v){return '<label class="ck"><span>'+lbl+'</span><input type="checkbox" data-k="'+k+'"'+(v?' checked':'')+'></label>'}
 function lnHtml(L,i){
  var h='<div class="ln" data-i="'+i+'"><div class="lnh"><b>Line '+(i+1)+'</b><span class="tag">'+MLAB[L.m]+'</span><span style="flex:1"></span><button class="ib" data-a="dup">Copy</button><button class="ib" data-a="del" style="color:var(--red)">Remove</button></div>';
- h+='<div class="g"><div class="field" style="margin-bottom:8px"><label>Room or area</label><input class="t" data-k="area" placeholder="Optional" value="'+escA(L.area)+'"></div><div class="field" style="margin-bottom:8px"><label>What the customer sees</label><input class="t" data-k="desc" placeholder="Describe the work" value="'+escA(L.desc)+'"></div></div>';
+ h+='<div><div class="field" style="margin-bottom:8px"><label>What the customer sees</label><input class="t" data-k="desc" placeholder="Describe the work" value="'+escA(L.desc)+'"></div><div class="field" style="margin-bottom:8px"><label>Room or area (optional)</label><input class="t" data-k="area" placeholder="Optional" value="'+escA(L.area)+'"></div></div>';
  if(L.m==='h'){h+=fld('Hours','hrs',L.hrs,'step="0.25"')+'<div class="hint" style="margin:-4px 0 8px">Labor is hours x the price per hour for this crew.</div>'}
  else if(L.m==='u'){
   h+='<div class="field" style="margin-bottom:8px"><label>Pick from the rate card</label><select class="t" data-a="rc"><option value="">Choose...</option>';
